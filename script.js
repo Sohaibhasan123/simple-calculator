@@ -19,10 +19,20 @@ document.addEventListener('keydown', (event)=>
         const result=document.getElementById("result").value;
         document.getElementById("result").value=result+event.key;
     }
-    else if(event.keyCode === 13)
+    else if(event.key=="=")
     {
         calculate();
     }
+    else if(event.key=="+"||event.key=="-"||event.key=="*"||event.key=="/"||event.key==".")
+    {
+        const result=document.getElementById("result").value;
+        document.getElementById("result").value=result+event.key;
+    }
+    else if(event.key=="Backspace")
+    {
+        clearScreen();
+    }
+    
 
 });
 
